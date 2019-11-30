@@ -5,69 +5,83 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/IndexStyle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/CreateJobStyle.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header>
-            <h1>some HR portal</h1>
-    </header>
-    <nav>
-            <a href="Index.aspx">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="HireEmployee.aspx">Hire Employee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="CreateJob.aspx">Create a New Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="EditJobDescription.aspx">Edit Job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="Jobs.aspx">Search Job Title</a>
-    </nav>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <span class="icon-bar"></span>                  
+      <a class="navbar-brand" href="Index.aspx"><span class="glyphicon glyphicon-fire logo-small"></span> HR Management</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Index.aspx">HOMEPAGE</a></li>
+        <li><a href="HireEmployee.aspx">HIRE EMPLOYEE</a></li>
+        <li><a href="CreateJob.aspx">CREATE JOB</a></li>
+        <li><a href="EditJobDescription.aspx">EDIT JOB</a></li>
+        <li><a href="Jobs.aspx">SEARCH JOB</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>            
+
+    <div class="jumbotron text-center">
+  <h1>Human Resources</h1> 
+  <p>Subarna - Phong - Ayhan </p> 
+</div>
+
     <div id="mainDiv">
         <div id="allContainer"  runat="server" class="d-flex justify-content-around">
-            <div id="JobsTable" runat="server"><% LoadTable(); %></div>
-            <div style="border:1px dotted black" runat="server">
+            <div runat="server" class="pull-right">
                 <form id="form1" runat="server">
                     <div class="form-group container-fluid">
                         <div>
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <asp:Label ID="Label5" runat="server" Text="Edit Job"></asp:Label>
+                            <div class="col-sm-12">
+                                <h2><asp:Label ID="Label5" runat="server" Text="Edit Job"></asp:Label></h2>
                             </div>
                             <br />
-                            <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-sm-12">
                                 <asp:Label ID="Label4" runat="server" Text="Job ID" for="ddl_job_id"></asp:Label>
                                 <asp:DropDownList ID="ddl_job_id" runat="server" class="form-control"
                                     OnSelectedIndexChanged="ddl_job_id_SelectedIndexChanged" AutoPostBack="true">
                                 </asp:DropDownList>
                             </div>
                             <br />
-                            <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-sm-12">
                                 <asp:Label ID="Label1" runat="server" Text="Job Title" for="tb_job_title"></asp:Label>
                                 <asp:TextBox ID="tb_job_title" runat="server" class="form-control"></asp:TextBox>
                             </div>
                             <br />
-                            <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-sm-6">
                                 <asp:Label ID="Label2" runat="server" Text="Maximum Salary" for="tb_max_salary"></asp:Label>
                                 <asp:TextBox ID="tb_max_salary" runat="server" class="form-control"></asp:TextBox>
                             </div>
                             <br />
-                            <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-sm-6">
                                 <asp:Label ID="Label3" runat="server" Text="Minimum Salary" for="tb_min_salary"></asp:Label>
                                 <asp:TextBox ID="tb_min_salary" runat="server" class="form-control"></asp:TextBox>
                             </div>
                             <br />
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                            
-                                <asp:Button ID="Button1" runat="server" Text="Change" class="btn btn-info" OnClick="btn_edit_job"/>
+                            <br />
+                                <asp:Button ID="Button1" Style="background-color: #f4511e;
+                                color: #fff;" runat="server" Text="Edit Job" class="btn btn-info" 
+                                    CssClass="btn btn-lg btn-block"
+                                    OnClick="btn_edit_job"/>
+                                <br />
+                                <asp:Label ID="lbl_stats" runat="server" Text="Label"></asp:Label>
                             </div>
                         </div>
                      </div>
                 </form>
+           </div>  
+            <div id="JobsTable" class="pull-left" runat="server"><% LoadTable(); %></div>            
            </div>
-           
-       </div>
-    </div>
-    <footer>
-        <h1>footer section</h1>
-    </footer>
-    <asp:Label ID="lbl_stats" runat="server" Text="Label"></asp:Label>
-</body>
+          </div>
+    </body>
 </html>

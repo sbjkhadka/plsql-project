@@ -1,0 +1,11 @@
+﻿.pull-left {
+    width: 60%;
+}
+
+.pull-right {
+    width: 35%;
+}
+
+#JobsTable {
+    margin: 10px 30px;
+}

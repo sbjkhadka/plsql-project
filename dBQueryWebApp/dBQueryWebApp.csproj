@@ -70,7 +70,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\CreateJobStyle.css" />
+    <Content Include="assets\css\HireEmployeeStyle.css" />
+    <Content Include="assets\css\IndexStyle.css" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\cover_image.jpg" />
     <Content Include="assets\js\script.js" />
     <Content Include="EditJobDescription.aspx" />
     <Content Include="Index.aspx" />

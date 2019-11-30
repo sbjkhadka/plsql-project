@@ -79,9 +79,15 @@ namespace dBQueryWebApp
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("p_jobid", OracleDbType.Varchar2).Value = tb_job_id.Text; ;
             cmd.Parameters.Add("p_title", OracleDbType.Varchar2).Value = tb_job_title.Text;
-            cmd.Parameters.Add("v_max_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_max_salary.Text);
-            cmd.Parameters.Add("v_min_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_min_salary.Text);
-
+            double maxSal,minSal;
+            bool parseMaxSal = double.TryParse(tb_max_salary.Text,out maxSal);
+            bool parseMinSal = double.TryParse(tb_max_salary.Text, out minSal);
+            if(parseMaxSal || parseMinSal)
+            {
+                cmd.Parameters.Add("v_max_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_max_salary.Text);
+                cmd.Parameters.Add("v_min_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_min_salary.Text);
+            }
+            
             try
             {
                 cmd.ExecuteNonQuery();

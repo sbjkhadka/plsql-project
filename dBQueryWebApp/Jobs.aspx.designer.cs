@@ -28,7 +28,7 @@ namespace dBQueryWebApp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_value;
+        protected global::System.Web.UI.WebControls.TextBox lbl_value;
         
         /// <summary>
         /// lbl_test control.

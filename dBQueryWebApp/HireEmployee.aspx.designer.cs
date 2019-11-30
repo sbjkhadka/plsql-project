@@ -163,7 +163,7 @@ namespace dBQueryWebApp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_job_title;
+        protected global::System.Web.UI.WebControls.TextBox lbl_job_title;
         
         /// <summary>
         /// ddl_job_title control.

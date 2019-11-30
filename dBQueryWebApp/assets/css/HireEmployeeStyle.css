@@ -1,0 +1,13 @@
+﻿.pull-left {
+    width: 30%;
+}
+
+.pull-right {
+    width: 70%;
+}
+#cal_hire_date {
+    width: 310px;
+    height: 310px;
+    margin: 10px 0px;
+    font-family: Montserrat,sans-serif;
+}
