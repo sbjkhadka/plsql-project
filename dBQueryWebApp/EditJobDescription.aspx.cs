@@ -140,8 +140,14 @@ namespace dBQueryWebApp
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("p_job_id", OracleDbType.Varchar2).Value = ddl_job_id.SelectedValue;
             cmd.Parameters.Add("p_job_title", OracleDbType.Varchar2).Value = tb_job_title.Text;
-            cmd.Parameters.Add("p_job_max_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_max_salary.Text);
-            cmd.Parameters.Add("p_job_min_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_min_salary.Text);
+            double maxSal, minSal;
+            bool parseMaxSal = double.TryParse(tb_max_salary.Text, out maxSal);
+            bool parseMinSal = double.TryParse(tb_max_salary.Text, out minSal);
+            if (parseMaxSal || parseMinSal) {
+                cmd.Parameters.Add("p_job_max_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_max_salary.Text);
+                cmd.Parameters.Add("p_job_min_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_min_salary.Text);
+            }
+                
        
             try
             {
