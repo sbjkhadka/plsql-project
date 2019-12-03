@@ -17,6 +17,7 @@ namespace dBQueryWebApp
         {
             connectToDB();
             renderDropDowns();
+            btnSubmit.Enabled = false;
         }
 
         private void connectToDB()
@@ -251,6 +252,7 @@ namespace dBQueryWebApp
         }
         protected void ddl_employee_id_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btnSubmit.Enabled = true;
             string employee_Id = ((DropDownList)sender).SelectedValue;
 
             renderEmployee(employee_Id);
