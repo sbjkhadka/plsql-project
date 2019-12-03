@@ -18,6 +18,13 @@ namespace dBQueryWebApp
             connectToDB();
             renderDropDowns();
             btnSubmit.Enabled = false;
+            tb_first_name.Enabled = false;
+            tb_last_name.Enabled = false;
+            ddl_job_id.Enabled = false;
+            ddl_job_title.Enabled = false;
+            ddl_manager_id.Enabled = false;
+            ddl_department_id.Enabled = false;
+
         }
 
         private void connectToDB()
@@ -86,23 +93,23 @@ namespace dBQueryWebApp
             cmd.CommandText = "Employee_edit_sp"; //name of the stored procedure;
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("p_employee_id", OracleDbType.Int32).Value = ddl_employee_id.Text;
-            cmd.Parameters.Add("p_first_name", OracleDbType.Varchar2).Value = tb_first_name.Text;
-            cmd.Parameters.Add("p_last_name", OracleDbType.Varchar2).Value = tb_last_name.Text;
+            //cmd.Parameters.Add("p_first_name", OracleDbType.Varchar2).Value = tb_first_name.Text;
+            //cmd.Parameters.Add("p_last_name", OracleDbType.Varchar2).Value = tb_last_name.Text;
             cmd.Parameters.Add("p_email", OracleDbType.Varchar2).Value = tb_email.Text;
             cmd.Parameters.Add("p_salary", OracleDbType.Double).Value = tb_salary.Text;
-            var year = cal_hire_date.SelectedDate.Year;
-            var month = cal_hire_date.SelectedDate.Month;
-            var day = cal_hire_date.SelectedDate.Day;
+            //var year = cal_hire_date.SelectedDate.Year;
+            //var month = cal_hire_date.SelectedDate.Month;
+            //var day = cal_hire_date.SelectedDate.Day;
 
-            DateTime dateTime = new DateTime(year, month, day);
-            cmd.Parameters.Add("p_hire_date", OracleDbType.Date).Value = dateTime;
+            //DateTime dateTime = new DateTime(year, month, day);
+            //cmd.Parameters.Add("p_hire_date", OracleDbType.Date).Value = dateTime;
 
             cmd.Parameters.Add("p_phone", OracleDbType.Varchar2).Value = tb_phone.Text;
-            cmd.Parameters.Add("p_job_id", OracleDbType.Varchar2).Value = "IT_PROG";
-            string[] mgr_id = ddl_manager_id.Text.Split();
-            cmd.Parameters.Add("p_manager_id", OracleDbType.Int32).Value = Convert.ToInt32(mgr_id[0]);
-            string[] dept_id = ddl_department_id.Text.Split();
-            cmd.Parameters.Add("p_department_id", OracleDbType.Int32).Value = dept_id[0];
+            //cmd.Parameters.Add("p_job_id", OracleDbType.Varchar2).Value = "IT_PROG";
+            //string[] mgr_id = ddl_manager_id.Text.Split();
+            //cmd.Parameters.Add("p_manager_id", OracleDbType.Int32).Value = Convert.ToInt32(mgr_id[0]);
+            //string[] dept_id = ddl_department_id.Text.Split();
+            //cmd.Parameters.Add("p_department_id", OracleDbType.Int32).Value = dept_id[0];
             try
             {
                 cmd.ExecuteNonQuery();
