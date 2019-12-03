@@ -76,6 +76,7 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\images\cover_image.jpg" />
     <Content Include="assets\js\script.js" />
+    <Content Include="EditEmp.aspx" />
     <Content Include="EditJobDescription.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Jobs.aspx" />
@@ -84,6 +85,13 @@
     <Content Include="HireEmployee.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditEmp.aspx.cs">
+      <DependentUpon>EditEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditEmp.aspx.designer.cs">
+      <DependentUpon>EditEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditJobDescription.aspx.cs">
       <DependentUpon>EditJobDescription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -151,6 +151,7 @@ C:\Users\khadk\Desktop\oracleTries\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQuery
 C:\Users\khadk\Desktop\oracleTries\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.csproj.CopyComplete
 C:\Users\khadk\Desktop\oracleTries\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.dll
 C:\Users\khadk\Desktop\oracleTries\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.pdb
+C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.csproj.CoreCompileInputs.cache
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\dBQueryWebApp.dll.config
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\dBQueryWebApp.dll
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\dBQueryWebApp.pdb
@@ -299,7 +300,6 @@ C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\Syste
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\Oracle.ManagedDataAccess.dll
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.csproj.CoreCompileInputs.cache
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.csproj.CopyComplete
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.dll
 C:\Users\khadk\Desktop\oracleTries\working\dBQueryWebApp\dBQueryWebApp\obj\Debug\dBQueryWebApp.pdb

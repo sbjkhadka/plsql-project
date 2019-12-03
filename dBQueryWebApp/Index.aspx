@@ -22,6 +22,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Index.aspx">HOMEPAGE</a></li>
         <li><a href="HireEmployee.aspx">HIRE EMPLOYEE</a></li>
+          <li><a href="EditEmp.aspx">EDIT EMPLOYEE INFORMATION</a></li>
         <li><a href="CreateJob.aspx">CREATE JOB</a></li>
         <li><a href="EditJobDescription.aspx">EDIT JOB</a></li>
         <li><a href="Jobs.aspx">SEARCH JOB</a></li>

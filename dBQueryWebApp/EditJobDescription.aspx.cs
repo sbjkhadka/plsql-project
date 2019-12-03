@@ -147,8 +147,6 @@ namespace dBQueryWebApp
                 cmd.Parameters.Add("p_job_max_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_max_salary.Text);
                 cmd.Parameters.Add("p_job_min_sal", OracleDbType.Varchar2).Value = Convert.ToInt32(tb_min_salary.Text);
             }
-                
-       
             try
             {
                 cmd.ExecuteNonQuery();
